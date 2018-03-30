@@ -3,7 +3,7 @@
 CREATE TABLE "Construtor"(
   "Nome" VARCHAR2(30 CHAR) PRIMARY KEY,
   "Construção Amadora" VARCHAR(3 CHAR)
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
 
 
 CREATE TABLE "Aeroporto "(
@@ -12,7 +12,7 @@ CREATE TABLE "Aeroporto "(
   "Região" VARCHAR2(30 CHAR) PRIMARY KEY,
   "Estado" VARCHAR2(25 CHAR) PRIMARY KEY,
   "Código Aeroporto" VARCHAR(25 CHAR)
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
 
 
 CREATE TABLE "Acidente "(
@@ -29,21 +29,21 @@ CREATE TABLE "Acidente "(
   "Total de Feridos Sérios" NUMBER(2),
   "Total de Feridos Menores" NUMBER(2),
   "Total de Feridos Ilesos" NUMBER(3)
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
 
 
 CREATE TABLE "Investigador "(
 "Investigador" VARCHAR2(50 CHAR) PRIMARY KEY,
 "Crachá" VARCHAR2(10 CHAR)
 "Morada" VARCHAR2(100 CHAR)
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
 
 CREATE TABLE "Transportadora "(
 "Transportadora" VARCHAR2(20) PRIMARY KEY,
 "Código" VARCHAR2(5 CHAR),
 "Demonização Completa" VARCHAR2(20 CHAR),
 "Pais" VARCHAR2(15 CHAR)
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
 
 CREATE TABLE "Investigação "(
   "Investigador" VARCHAR2(50 CHAR) FOREIGN KEY REFERENCES "Investigador"("Investigador"),
@@ -52,7 +52,7 @@ CREATE TABLE "Investigação "(
   "Data de Inicio" DATE,
   "Data de Fim" DATE,
   "Estado" VARCHAR2(15 CHAR)
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
 
 
 CREATE TABLE "Voo "(
@@ -64,7 +64,7 @@ CREATE TABLE "Voo "(
   "Transportadora Aérea"  VARCHAR2(30 CHAR) FOREIGN KEY REFERENCES "Transportadora"("Transportadora"),
   "Tipo de Voo" VARCHAR2(30 CHAR),
   "Propósito de Voo" VARCHAR2(30 CHAR)
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
 
 CREATE TABLE "Aeronave "(
   "Registo" VARCHAR2(6 CHAR) PRIMARY KEY,
@@ -73,4 +73,4 @@ CREATE TABLE "Aeronave "(
   "Modelo" VARCHAR2(25 CHAR),
   "Tipo de Motor" VARCHAR(25 CHAR),
   "Numero de Motores" NUMBER
-) TAVLESPACE JMsDB;
+) TABLESPACE JMsDB;
